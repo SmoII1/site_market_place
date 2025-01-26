@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooky - Online Book and Comic Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <form action="accounts/logout/" method="post">
+        {%csrf_token%}
+        <button type="submit">Выйти</button>
+    </form>    
+    <header>
+         {% include 'header.html' %}
+    </header>
+    <main>
+        {% include 'items.html' %}
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2024 SkyGame. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

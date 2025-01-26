@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Наши товары</h2>
+    <div class="product-grid">
+        {%for item in items_spisok%}
+            <div class="product-card">
+                <a href="item_card/{{item.name}}/"><img src="{{item.image.url}}" alt="Product {{item.id}}"></a>
+                <h3>{{item.name}}</h3>
+                <p class="price">{{item.cost}}</p>
+                <button>Добавить в корзину</button>
+            </div>
+        {%endfor%}
+    </div>
+</div
